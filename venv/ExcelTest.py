@@ -5,7 +5,7 @@ import  xlsxwriter
 writer = pd.ExcelWriter('E:\Work\\result.xlsx', engine='xlsxwriter')
 
 # Write your DataFrame to a file
-list ={'col1':['num','name','url'],'col2':[1,'some name','some url']}
+list ={'col1':['номер','наименование','урл'],'col2':[1,'some name','some url']}
 yourData = pd.DataFrame(list)
 yourData.to_excel(writer, 'Sheet1')
 
