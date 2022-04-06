@@ -13,4 +13,4 @@ driver.get('http://stackoverflow.com/')
 
 # close the tab
 driver.find_element_by_tag_name('body').send_keys(Keys.COMMAND + 'w')
-driver.close()
+#driver.close()
