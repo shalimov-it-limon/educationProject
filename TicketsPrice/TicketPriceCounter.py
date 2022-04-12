@@ -7,7 +7,7 @@ try:
 except ValueError:
     print("Количество билетов должно быть целым числом более 1.")
 # Запрашиваем возраст посетителей
-for i in range(1, tickets+1):
+for i in range(1, tickets + 1):
     try:
         age = int(input(f'Укажите возраст {i} ого посетителя.'))
         if age <= 0:
@@ -15,8 +15,8 @@ for i in range(1, tickets+1):
         if 0 < age <= 7:
             print('Указан слищком маленький возраст.')
             print(f'В {age}  лет ещё рано в конференциях участвовать.')
-        if 7< age <18:
-            count+=1
+        if 7 < age < 18:
+            count += 1
         if 18 <= age < 25:
             price += 990
             count += 1
