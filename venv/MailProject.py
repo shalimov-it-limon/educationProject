@@ -30,7 +30,7 @@ def detect_charset_and_decode_string(text: str) -> str:
             return  text
 
 mail = imaplib.IMAP4_SSL('imap.mail.ru')
-mail.login('shalimov@it-limon.ru', '1IXBMyd3kOH70Osd')
+mail.login('shalimov@it-limon.ru', 'всё вам скажи, да покажи, ага')
 
 mail.list()
 mail.select("inbox")
