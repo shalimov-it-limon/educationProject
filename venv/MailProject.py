@@ -47,7 +47,7 @@ raw_email_string = raw_email.decode('utf-8')
 
 email_message = email.message_from_string(raw_email_string)
 
-print("Адресат: " + str(detect_charset_and_decode_string(detect_charset_and_decode_string(email.utils.parseaddr(email_message['To'])))))
+print("Адресат: " + str(detect_charset_and_decode_string(email.utils.parseaddr(email_message['To']))))
 print("Отправитель: " + detect_charset_and_decode_string(email.utils.parseaddr(email_message['From'])))
 print("Дата отправки: " + detect_charset_and_decode_string(email_message['Date']))
 print("Тема письма:" + detect_charset_and_decode_string(email_message['Subject']))
@@ -57,8 +57,10 @@ if email_message.is_multipart():
     for payload in email_message.get_payload():
         body = payload.get_payload(decode=True).decode('utf-8')
         body = detect_charset_and_decode_string(body)
+        body = html2text.html2text(body)
         print(body)
 else:
     body = email_message.get_payload(decode=True).decode('utf-8')
     body = detect_charset_and_decode_string(body)
+    body = html2text.html2text(body)
     print(body)
