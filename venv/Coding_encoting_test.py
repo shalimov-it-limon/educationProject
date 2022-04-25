@@ -12,10 +12,12 @@ def changChar(char):
     else:
         return  char
 
+#Файл text.txt должен лежать в той же папке, где лежит данный скрипт и должен содержать какой-то текст
 with open('text.txt',encoding='utf8') as myFile:
     for line in myFile:
         for char in line:
             summary += changChar(char)
 
+#Файл output.txt должен лежать в той же папке, где лежит данный скрипт
 with open('output.txt','w',encoding='utf8') as myFile:
     myFile.write(summary)
