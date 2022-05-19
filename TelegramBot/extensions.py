@@ -26,7 +26,7 @@ class CurrencyConverter:
         try:
             amount = float(amount)
             if amount<=0:
-                raise APIException(f'Количество конвертируемой валюты не может быть меньше или равной нулю. Вариант {amount} не удовлетворяет этому условию.')
+                raise APIException(f'Количество конвертируемой валюты не может быть меньше или равной нулю.\n Вариант {amount} не удовлетворяет этому условию.')
         except ValueError:
             raise APIException(f'Не удалось обработать количество {amount}')
 
