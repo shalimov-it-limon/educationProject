@@ -20,6 +20,14 @@ def values(message: telebot.types.Message):
         text = '\n'.join((text, key,))
     bot.reply_to(message, text)
 
+@bot.message_handler(commands=['stop'])
+def stop(message: telebot.types.Message):
+    text = 'Завершаю работу'
+    try:
+        bot.stop_bot()
+    except RuntimeError:
+        bot.reply_to(message, text)
+
 
 @bot.message_handler(content_types=['text', ])
 def convert(message: telebot.types.Message):
@@ -37,6 +45,8 @@ def convert(message: telebot.types.Message):
     else:
         text = f'За {amount} {quote} можно получить {total_base} валюты {base}'
         bot.send_message(message.chat.id, text)
+
+
 
 
 bot.polling()
