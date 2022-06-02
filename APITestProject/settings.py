@@ -1,0 +1,8 @@
+valid_fsym ="BTC"
+valid_fsyms = "BTC,ETH,ZEC"
+valid_tsym = "USD,JPY,EUR"
+valid_tsyms = "USD,EUR"
+valid_tsym2 = "USD"
+valid_extra_params = "Kraken"
+valid_lang = "EN"
+API_Key = "9ce173dbc7d532c4e66a992462cbba7d2def491551b884e4dd47ff7364b38db4"
