@@ -25,6 +25,12 @@ def test_show_my_pets():
 
 
 def test_pets_images_names():
+   pytest.driver.find_element_by_id('email').send_keys('shalimov@it-limon.ru')
+   pytest.driver.find_element_by_id('pass').send_keys('Bn3s6wp9')
+   pytest.driver.find_element_by_css_selector('button[type="submit"]').click()
+
+   time.sleep(2)
+
    images = pytest.driver.find_elements_by_css_selector('.card-deck .card-img-top')
    names = pytest.driver.find_elements_by_css_selector('.card-deck .card-img-top')
    descriptions = pytest.driver.find_elements_by_css_selector('.card-deck .card-img-top')
