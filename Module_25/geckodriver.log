@@ -1,0 +1,108 @@
+geckodriver: error: Found argument '--websocket-port' which wasn't expected, or isn't valid in this context
+
+USAGE:
+    geckodriver [FLAGS] [OPTIONS]
+
+For more information try --help
+
+1657725243009	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofilei4hVw4"
+1657725243411	Marionette	INFO	Marionette enabled
+1657725243416	Marionette	INFO	Listening on port 57856
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1657725244016	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofilei4hVw4\\search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://petfriends.skillfactory.ru"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://petfriends.skillfactory.ru"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1657725254650	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:234:19
+TimedPromise@chrome://remote/content/marionette/sync.js:219:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1657725264570	Marionette	INFO	Stopped listening on port 57856
+1657725341402	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofilepfzIPx"
+1657725341820	Marionette	INFO	Marionette enabled
+1657725341824	Marionette	INFO	Listening on port 57935
+1657725342210	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofilepfzIPx\\search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://petfriends.skillfactory.ru"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://petfriends.skillfactory.ru"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1657725345329	Marionette	INFO	Stopped listening on port 57935
+1657725490076	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofileW4WLfP"
+1657725490508	Marionette	INFO	Marionette enabled
+1657725490512	Marionette	INFO	Listening on port 58004
+1657725490906	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofileW4WLfP\\search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://petfriends.skillfactory.ru"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://petfriends.skillfactory.ru"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1657725494037	Marionette	INFO	Stopped listening on port 58004
+1657725497763	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofile02XM0l"
+1657725498165	Marionette	INFO	Marionette enabled
+1657725498169	Marionette	INFO	Listening on port 58062
+1657725498762	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofile02XM0l\\search.json.mozlz4", (void 0)))
+[Parent 9928, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1657725500403	Marionette	INFO	Stopped listening on port 58062
+[Parent 9928, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1657727336043	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofiler4RX7n"
+1657727336461	Marionette	INFO	Marionette enabled
+1657727336465	Marionette	INFO	Listening on port 58305
+1657727336873	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofiler4RX7n\\search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://petfriends.skillfactory.ru"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://petfriends.skillfactory.ru"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1657727340266	Marionette	INFO	Stopped listening on port 58305
+1657727343934	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofileveio29"
+1657727344335	Marionette	INFO	Marionette enabled
+1657727344339	Marionette	INFO	Listening on port 58360
+1657727344744	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofileveio29\\search.json.mozlz4", (void 0)))
+1657727346710	Marionette	INFO	Stopped listening on port 58360
+1657727463091	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofile7Y4byh"
+1657727463497	Marionette	INFO	Marionette enabled
+1657727463502	Marionette	INFO	Listening on port 58413
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1657727464109	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofile7Y4byh\\search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://petfriends.skillfactory.ru"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://petfriends.skillfactory.ru"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1657727467120	Marionette	INFO	Stopped listening on port 58413
+1657727470857	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofileV2iQ4L"
+1657727471250	Marionette	INFO	Marionette enabled
+1657727471254	Marionette	INFO	Listening on port 58472
+1657727471854	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofileV2iQ4L\\search.json.mozlz4", (void 0)))
+[Parent 14252, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1657727473649	Marionette	INFO	Stopped listening on port 58472
+console.warn: services.settings: main/whats-new-panel sync interrupted by shutdown
+[Parent 14252, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+[Parent 14252, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1657729539986	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofileC7AKAH"
+1657729540390	Marionette	INFO	Marionette enabled
+1657729540395	Marionette	INFO	Listening on port 50846
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1657729540984	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofileC7AKAH\\search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://petfriends.skillfactory.ru"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://petfriends.skillfactory.ru"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1657729544205	Marionette	INFO	Stopped listening on port 50846
+1657729547908	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofilek3ApTi"
+1657729548306	Marionette	INFO	Marionette enabled
+1657729548310	Marionette	INFO	Listening on port 50902
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1657729548913	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofilek3ApTi\\search.json.mozlz4", (void 0)))
+1657729550492	Marionette	INFO	Stopped listening on port 50902
+console.error: services.settings: 
+  main/message-groups Signature failed  TypeError: NetworkError: Network request failed
