@@ -1,5 +1,4 @@
 class Locators:
-
     # login page objects
     username_textbox_name = 'login'
     password_textbox_name = 'password'
@@ -9,7 +8,7 @@ class Locators:
     invalidUsernameAndPassword_css_selector = '#content-box > div > div'
 
     # home page objects
-    welcome_css_selector = '#content-box > div > h2'
+    '''welcome_css_selector = '#content-box > div > h2'
     click_my_tabs_css_selector = '#content-box > h1'
     my_tabs_link_text = 'Мои закладки'
     my_orders_link_text = 'Мои заказы'
@@ -45,16 +44,28 @@ class Locators:
     articles_xpath = '//*[@id="footer"]/div[1]/div[2]/ul/li[4]/a'
     top_logo_css_selector = '#logo > a'
     button_buy_vint1_xpath = '//*[@id="indicator_catalog"]/div[1]/div[1]/div/button[1]'
+    '''
 
     ##############################ТУТ НАЧИНАЮТСЯ ЛОКАТОРЫ ЛАБИРИНТА####################################
     my_lab_button_xpath = '//*[@id="minwidth"]/div[4]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[4]/a[1]/span[1]/span[1]/span[1]'
+    messages_button_xpath = '//*[@id="minwidth"]/div[4]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[3]/a[1]/span[1]/span[1]/span[1]'
     main_menu_xpath = '//ul[@class = "b-header-b-personal-e-list ul-justify"]/li'
     cookie_policy_botton_xpath = '//button[@class="cookie-policy__button js-cookie-policy-agree"]'
-    #login_input_xpath = '//*[@id="_inputnamecode_3"]'
     login_input_xpath = '//input'
     authorization_button_xpath = '//*[@id="g-recap-0-btn"]'
     discount_code_xpath = "//input[@name='code']"
     authorization_email_sent_button_xpath = '//*[@id="auth-email-sent"]/input[5]'
     succesfull_login_popup_xpath = "//span[@class='popup-nib-tip']"
-    logout_link_xpath = '//*[@id="minwidth"]/div[4]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[4]/div[1]/div[1]/div[1]/ul[1]/li[6]/a[1]'
+    logout_link_xpath = '//a[@class="user-top-menu-link user-top-menu-link_logout"]'
     discount_code_div_xpath = "//div[@class='max-width discount-code']"
+    search_field_xpath = '//*[@id="search-field"]'
+    search_button_xpath = "//button[@class='b-header-b-search-e-btn']"
+    search_result_xpath = '//*[@id="stab-slider-frame"]/ul[1]/li[1]'
+    labirint_logo_xpath = '//a[@class="b-header-b-logo-e-logo-wrap"]'
+    messages_xpath = '//span[@class="b-header-b-personal-e-icon-wrapper"]'
+    top_menu_xpath = "//span[@class='b-header-b-personal-e-wrapper-m-closed']"
+    labirint_now_xpath = '//a[@href="/now"]'
+    labirint_best_xpath = '//a[@href="/best/"]'
+    cart_create_order_xpath = '//a[@title="Оформить заказ"]'
+    empty_cart_xpath = '//*[@id="basket-step1-default"]/div[1]/span'
+    users_agreement_xpath = "//a[@href='/agreement/']"
