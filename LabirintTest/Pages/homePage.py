@@ -15,47 +15,6 @@ class HomePage:
 
     def __init__(self, driver):
         self.driver = driver
-        '''
-        self.welcome_css_selector = Locators.welcome_css_selector
-        self.click_my_tabs_css_selector = Locators.click_my_tabs_css_selector
-        self.my_tabs_link_text = Locators.my_tabs_link_text
-        self.my_orders_link_text = Locators.my_orders_link_text
-        self.my_profile_link_text = Locators.my_profile_link_text
-        self.contact_info_link_text = Locators.contact_link_text
-        self.delivery_info_link_text = Locators.delivery_info_link_text
-        self.other_info_link_text = Locators.other_info_link_text
-        self.change_password_link_text = Locators.change_password_link_text
-        self.new_password_class_name = Locators.new_password_class_name
-        self.confirmation_new_password_class_name = Locators.confirmation_new_password_class_name
-        self.old_password_class_name = Locators.old_password_class_name
-        self.exit_link_text = Locators.exit_link_text
-        self.basket_id = Locators.basket_id
-        self.catalog_products_class_name = Locators.catalog_products_class_name
-        self.new_products_xpath = Locators.new_products_xpath
-        self.sale_xpath = Locators.sale_xpath
-        self.discounts_and_bonuses_xpath = Locators.discounts_and_bonuses_xpath
-        self.payment_and_delivery_xpath = Locators.payment_and_delivery_xpath
-        self.hurry_up_xpath = Locators.hurry_up_xpath
-        self.contacts_xpath = Locators.contacts_xpath
-        self.airsoft_guns_xpath = Locators.airsoft_guns_xpath
-        self.all_guns_xpath = Locators.all_guns_xpath
-        self.pyrotechnics_xpath = Locators.pyrotechnics_xpath
-        self.all_guns_xpath_2 = Locators.all_guns_xpath_2
-        self.link_vk_xpath = Locators.link_vk_xpath
-        self.link_facebook_xpath = Locators.link_facebook_xpath
-        self.link_twitter_xpath = Locators.link_twitter_xpath
-        self.link_instagram_xpath = Locators.link_instagram_xpath
-        self.link_youtube_xpath = Locators.link_youtube_xpath
-        self.link_telegram_bot_xpath = Locators.link_telegram_bot_xpath
-        self.email_us_css_selector = Locators.email_us_css_selector
-        self.close_the_form_css_selector = Locators.close_the_form_css_selector
-        self.articles_xpath = Locators.articles_xpath
-        self.top_logo_css_selector = Locators.top_logo_css_selector
-        self.button_buy_vint1_xpath = Locators.button_buy_vint1_xpath
-        
-        '''
-
-        ###############################################ТУТ НАЧИНАЮТСЯ ЛОКАТОРЫ ЛАБИРИНТА######################################
         self.my_lab_xpath = Locators.my_lab_button_xpath
         self.main_menu_xpath = Locators.main_menu_xpath
         self.cookie_policy_button_xpath = Locators.cookie_policy_botton_xpath
@@ -77,6 +36,23 @@ class HomePage:
         self.cart_menu_create_order_xpath = Locators.cart_create_order_xpath
         self.empty_cart_xpath = Locators.empty_cart_xpath
         self.users_agreement_xpath = Locators.users_agreement_xpath
+        self.books_button_xpath = Locators.books_button_xpath
+        self.books_games_xpath = Locators.books_gameworld_xpath
+        self.books_comix_xpath = Locators.books_comix_xpath
+        self.school_button = Locators.school_button_xpath
+        self.school_predmet_english_xpath = Locators.school_predmet_english_xpath
+        self.games_button_xpath = Locators.games_button_xpath
+        self.children_art_xpath = Locators.children_art_xpath
+        self.diamond_mozaik_xpath = Locators.diamonds_mozaic_xpath
+        self.stationery_xpath = Locators.stationery_xpath
+        self.globus_xpath = Locators.globus_xpath
+        self.mainmenu_submenu_xpath = Locators.mainmenu_submenu_xpath
+        self.multimedia_xpath = Locators.multimedia_xpath
+        self.souvenir_xpath = Locators.souvenir_xpath
+        self.journals_xpath = Locators.journals_xpath
+        self.household_xpath = Locators.household_xpath
+        self.club_xpath = Locators.club_xpath
+        self.region_xpath = Locators.region_xpath
 
     def click_login_operations(self, login):
         # Вводим телефон/почту/код скидки
@@ -247,6 +223,169 @@ class HomePage:
 
     def click_user_agreement_button(self):
         # Нажимаем на пользовательнское соглашение
-        element = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, self.users_agreement_xpath)))
+        element = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.users_agreement_xpath)))
         element = self.driver.find_elements(By.XPATH, self.users_agreement_xpath)[1]
+        element.click()
+
+    def click_books_button(self):
+        # Нажимаем на кнопку "Книги" главного меню
+        element = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.books_button_xpath)))
+        element = self.driver.find_elements(By.XPATH, self.books_button_xpath)[0]
+        element.click()
+
+    def click_genre(self):
+        # Наводим курсор на кнопку "Книги"
+        books = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.books_button_xpath)))
+        actions = ActionChains(self.driver)
+        actions.move_to_element(books)
+        actions.perform()
+        # Наводим на категорию "Комиксы,Манга,Артбуки
+        comix = self.driver.find_elements(By.XPATH, self.books_comix_xpath)[2]
+        actions = ActionChains(self.driver)
+        actions.move_to_element(comix)
+        actions.perform()
+        # Нажимаем на "Артбуки.Игровые миры.Вселенные
+        element = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.books_games_xpath)))
+        element.click()
+
+    def click_best(self):
+        # Нажимаем на кнопку "Главное <текущий год>"
+        element = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.cart_menu_best_xpath)))
+        element = self.driver.find_elements(By.XPATH, self.cart_menu_best_xpath)[2]
+        element.click()
+
+    def click_school_button(self):
+        # Нажимаем на кнопку "Книги" главного меню
+        element = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.school_button)))
+        element = self.driver.find_elements(By.XPATH, self.school_button)[0]
+        element.click()
+
+    def click_school_english(self):
+        # Наводим курсор на "Школа"
+        time.sleep(2)
+        element = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.school_button)))
+        element = self.driver.find_elements(By.XPATH, self.school_button)[1]
+        actions = ActionChains(self.driver)
+        actions.move_to_element(element)
+        actions.perform()
+        # Нажимаем на "Английский язык"
+        english = self.driver.find_element(By.XPATH, self.school_predmet_english_xpath)
+        english.click()
+
+    def click_games_button(self):
+        # Нажимаем на кнопку "Игрушки" главного меню
+        element = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.games_button_xpath)))
+        element = self.driver.find_elements(By.XPATH, self.games_button_xpath)[0]
+        element.click()
+
+    def click_children_art(self):
+        # Наводим на "Игрушки"
+        time.sleep(2)
+        games = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.games_button_xpath)))
+        games = self.driver.find_elements(By.XPATH, self.games_button_xpath)[0]
+        actions = ActionChains(self.driver)
+        actions.move_to_element(games)
+        actions.perform()
+        # Наводим курсор на "Детское творчество"
+        children_art = self.driver.find_element(By.XPATH, self.children_art_xpath)
+        actions = ActionChains(self.driver)
+        actions.move_to_element(children_art)
+        actions.perform()
+        # Нажимаем на "Алмазеые мозаики
+        diamond_mozaik = self.driver.find_element(By.XPATH, self.diamond_mozaik_xpath)
+        diamond_mozaik.click()
+
+    def click_stationery_button(self):
+        # Нажимаем на кнопку "Канцтовары" главного меню
+        element = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.stationery_xpath)))
+        element = self.driver.find_elements(By.XPATH, self.stationery_xpath)[0]
+        element.click()
+
+    def click_globus_xpath(self):
+        # Наводим курсор на канцтовары
+        time.sleep(2)
+        games = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.stationery_xpath)))
+        games = self.driver.find_elements(By.XPATH, self.stationery_xpath)[0]
+        actions = ActionChains(self.driver)
+        actions.move_to_element(games)
+        actions.perform()
+        # Нажимаем на "Глобусы"
+        globus = self.driver.find_element(By.XPATH, self.globus_xpath)
+        globus.click()
+
+    def click_cd_dvd_button(self):
+        # Наводим курсор на кнопку "Ещё..." главного меню
+        time.sleep(2)
+        element = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.mainmenu_submenu_xpath)))
+        element = self.driver.find_elements(By.XPATH, self.mainmenu_submenu_xpath)[0]
+        actions = ActionChains(self.driver)
+        actions.move_to_element(element)
+        actions.perform()
+        # Нажимаем на CD/DVD
+        multimedia = self.driver.find_elements(By.XPATH,self.multimedia_xpath)[-2]
+        multimedia.click()
+
+    def click_souvenir_button(self):
+        # Наводим курсор на кнопку "Ещё..." главного меню
+        time.sleep(2)
+        element = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.mainmenu_submenu_xpath)))
+        element = self.driver.find_elements(By.XPATH, self.mainmenu_submenu_xpath)[0]
+        actions = ActionChains(self.driver)
+        actions.move_to_element(element)
+        actions.perform()
+        # Нажимаем на "Сувениры"
+        souvenir = self.driver.find_elements(By.XPATH,self.souvenir_xpath)[-2]
+        souvenir.click()
+
+    def click_journals_button(self):
+        # Наводим курсор на кнопку "Ещё..." главного меню
+        time.sleep(2)
+        element = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.mainmenu_submenu_xpath)))
+        element = self.driver.find_elements(By.XPATH, self.mainmenu_submenu_xpath)[0]
+        actions = ActionChains(self.driver)
+        actions.move_to_element(element)
+        actions.perform()
+        # Нажимаем на "Журналы"
+        souvenir = self.driver.find_elements(By.XPATH,self.journals_xpath)[-2]
+        souvenir.click()
+
+    def click_household_button(self):
+        # Наводим курсор на кнопку "Ещё..." главного меню
+        time.sleep(2)
+        element = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.mainmenu_submenu_xpath)))
+        element = self.driver.find_elements(By.XPATH, self.mainmenu_submenu_xpath)[0]
+        actions = ActionChains(self.driver)
+        actions.move_to_element(element)
+        actions.perform()
+        # Нажимаем на "Товары для дома"
+        souvenir = self.driver.find_elements(By.XPATH,self.household_xpath)[-2]
+        souvenir.click()
+
+    def click_club_button(self):
+        # Нажимаем на кнопку "Клуб" главного меню
+        element = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.club_xpath)))
+        element = self.driver.find_elements(By.XPATH, self.club_xpath)[0]
+        element.click()
+
+    def click_region_button(self):
+        #Нажимаем на кнопку с названием региона в главном меню
+        element = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.region_xpath)))
+        element = self.driver.find_elements(By.XPATH, self.region_xpath)[0]
         element.click()

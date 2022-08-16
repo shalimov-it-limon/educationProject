@@ -69,3 +69,20 @@ class Locators:
     cart_create_order_xpath = '//a[@title="Оформить заказ"]'
     empty_cart_xpath = '//*[@id="basket-step1-default"]/div[1]/span'
     users_agreement_xpath = "//a[@href='/agreement/']"
+    books_button_xpath = "//a[@href='/books/']"
+    books_comix_xpath = "//span[@class='b-menu-list-title b-menu-list-title-first']"
+    books_gameworld_xpath = "//a[@href='/genres/2994']"
+    school_button_xpath = "//a[@href='/school/']"
+    school_predmet_english_xpath = '//a[@href="/school/?predmet[]=4#right"]'
+    games_button_xpath = '//a[@href="/games/"]'
+    children_art_xpath = '//*[@id="header-toys"]/div[1]/ul[1]/li[3]/span[1]'
+    diamonds_mozaic_xpath = '//a[@href="/genres/3339"]'
+    stationery_xpath = "//a[@href='/office/']"
+    globus_xpath = "//a[@href = '/genres/1500']"
+    mainmenu_submenu_xpath = '//span[@class="b-header-b-menu-e-text"]'
+    multimedia_xpath = "//a[@href='/multimedia/']"
+    souvenir_xpath = "//a[@href='/souvenir/']"
+    journals_xpath = "//a[@href='/journals/']"
+    household_xpath = "//a[@href='/household/']"
+    club_xpath = "//a[@href='/club/']"
+    region_xpath = '//span[@class="region-location-icon-txt "]'
