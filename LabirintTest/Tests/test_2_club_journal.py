@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-import time
-
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
