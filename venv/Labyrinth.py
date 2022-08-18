@@ -68,10 +68,13 @@ for i in labirint:
             pozOut = (ii, jj)
         elif j == '1':
             labirint[ii][jj] = -1
-        else:
-            labirint[ii][jj] = 0
+        # else:
+        #     labirint[ii][jj] = 0
         jj += 1
     ii += 1
+
+
+pozOut = (0,6)
 
 if not found(labirint, pozOut):
     print("Путь не найден!")

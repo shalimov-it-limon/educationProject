@@ -1,8 +1,13 @@
-def hello_world():
-    m = 'hello, world'
+a = ["asd", "bbd", "ddfa", "mcsa"]
 
-    print(m.replace('h', 'H') and m.replace('w', 'W'))
 
-    print(m.replace('h', 'H').replace('w', 'W'))
+#list = list(map(lambda x: len(a[x]), range(0, len(a))))
 
-#hello_world()
+print(list(map(lambda x:len(str(x)),a)))
+
+print (list(map(lambda x: len(a[x]), range(0, len(a)))))
+
+#print(list1)
+
+print(list(map(len, a)))
+
