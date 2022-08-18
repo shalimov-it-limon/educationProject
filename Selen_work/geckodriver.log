@@ -1,0 +1,52 @@
+1657110483330	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofileMsmU1s"
+1657110483885	Marionette	INFO	Marionette enabled
+1657110483891	Marionette	INFO	Listening on port 49566
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1657110484664	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofileMsmU1s\\search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.google.com"
+1657110645972	Marionette	INFO	Stopped listening on port 49566
+1657278783971	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofileI20N2b"
+1657278784406	Marionette	INFO	Marionette enabled
+1657278784412	Marionette	INFO	Listening on port 62166
+1657278784781	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofileI20N2b\\search.json.mozlz4", (void 0)))
+[Parent 10808, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://petfriends.skillfactory.ru"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://petfriends.skillfactory.ru"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1657278789383	Marionette	INFO	Stopped listening on port 62166
+1657717361772	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofilepm5Qmu"
+1657717362348	Marionette	INFO	Marionette enabled
+1657717362353	Marionette	INFO	Listening on port 62017
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1657717363201	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofilepm5Qmu\\search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://petfriends.skillfactory.ru"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://petfriends.skillfactory.ru"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1657717366394	Marionette	INFO	Stopped listening on port 62017
+1657721373721	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofilefv9AOz"
+1657721374173	Marionette	INFO	Marionette enabled
+1657721374178	Marionette	INFO	Listening on port 62351
+1657721374574	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofilefv9AOz\\search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://petfriends.skillfactory.ru"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://petfriends.skillfactory.ru"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1657721382745	Marionette	INFO	Stopped listening on port 62351
+[Parent 9640, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:723
+1657722026281	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofilesfEZHQ"
+1657722026700	Marionette	INFO	Marionette enabled
+1657722026705	Marionette	INFO	Listening on port 62488
+1657722027096	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\user1\\AppData\\Local\\Temp\\rust_mozprofilesfEZHQ\\search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://petfriends.skillfactory.ru"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://petfriends.skillfactory.ru"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1657722029413	Marionette	INFO	Stopped listening on port 62488
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+JavaScript error: resource://gre/modules/TerminatorTelemetry.jsm, line 71: AbortError: IOUtils: Shutting down and refusing additional I/O tasks
