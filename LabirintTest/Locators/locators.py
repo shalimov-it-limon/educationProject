@@ -86,3 +86,20 @@ class Locators:
     household_xpath = "//a[@href='/household/']"
     club_xpath = "//a[@href='/club/']"
     region_xpath = '//span[@class="region-location-icon-txt "]'
+    region_input_xpath = '//input[@id="region-post"]'
+    map_xpath = '//a[@href="/maps/"]'
+    delivery_date_filter_xpath = '//*[@id="js-delivery-date-filter"]'
+    delevery_dates_select_all_xpath = '//*[@id="delivery-dates-popup-window"]/div[2]/div[1]'
+    delivery_point_caption_xpath = '//div[@class = "delivery-point__caption"]'
+    delivery_point_ymaps_xpath = '//*[@id="delivery-point-map"]/ymaps/ymaps/ymaps/ymaps[7]/ymaps/ymaps/ymaps/ymaps[1]/ymaps[2]'
+    delivery_and_paymen_button_xpath = '//a[@class ="b-header-b-sec-menu-e-link"]'
+
+    cart_clear_cart_xpath = '//a[@class="b-link-popup"]'
+    cart_restore_xpath = '//a[@class="b-link-popup g-alttext-deepblue"]'
+    cart_deffered_xpath = '//a[@href="#step1-put"]'
+    cart_mycart_xpath = '//a[@href="#step1-default"]'
+    cart_deffered_goods_xpath = '//*[@id="step1-put"]/div[1]/div[1]'
+    cart_mycart_goods_xpath = '//*[@id="basket-step1-default"]/div[2]/span[1]'
+    cart_coupon_xpath = '//*[@id="basket-step1-default"]/div[5]/div[2]/span[1]/span[1]'
+    cart_coupon_input_xpath = '//input[@placeholder="КУПОН"]'
+    cart_coupon_apply_button_xpath = '//div[@class="base-button--content"]'

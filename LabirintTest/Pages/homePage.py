@@ -1,4 +1,4 @@
-# страница пользовательского профиля
+# основная страница
 import time
 
 from selenium.webdriver.support.ui import WebDriverWait
@@ -53,6 +53,13 @@ class HomePage:
         self.household_xpath = Locators.household_xpath
         self.club_xpath = Locators.club_xpath
         self.region_xpath = Locators.region_xpath
+        self.region_input_xpath = Locators.region_input_xpath
+        self.map_xpath = Locators.map_xpath
+        self.delivery_date_filter_xpath = Locators.delivery_date_filter_xpath
+        self.delivery_date_xpath = Locators.delevery_dates_select_all_xpath
+        self.delivery_point_caption_xpath = Locators.delivery_point_caption_xpath
+        self.delivery_point_ymaps_xpath = Locators.delivery_point_ymaps_xpath
+        self.secondary_menu_xpath = Locators.delivery_and_paymen_button_xpath
 
     def click_login_operations(self, login):
         # Вводим телефон/почту/код скидки
@@ -98,14 +105,12 @@ class HomePage:
 
     def check_login_successful(self):
         # Получаем код скидки из главной страницы сайта
-        time.sleep(2)
         element = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, self.personal_discount_xpath)))
         return element.text
 
     def click_logout_button(self):
         # Наводим курсор мыши на кнопку "Мой Лаб"
-        time.sleep(2)
         element = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, self.main_menu_xpath)))
         actions = ActionChains(self.driver)
@@ -134,7 +139,7 @@ class HomePage:
 
     def click_labirint_logo(self):
         # Нажатие на логотип "Лабиринт" для возвращения на главную страницу
-        # Для валидности проверки сначала перейдём на другую страницу, напрмер, поиска
+        # Для валидности проверки сначала перейдём на другую страницу, например, поиска
         element = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, self.search_field_xpath)))
         actions = ActionChains(self.driver)
@@ -145,7 +150,6 @@ class HomePage:
         # Нажимаем на кнопку поиска
         self.driver.find_element(By.XPATH, self.search_button_xpath).click()
         # Теперь прожимаем логотип лабиринта
-        time.sleep(2)
         element = WebDriverWait(self.driver, 20).until(
             EC.presence_of_element_located((By.XPATH, self.labirint_logo_xpath)))
         element.click()
@@ -153,14 +157,12 @@ class HomePage:
     def click_personal_cabinet_button(self):
         # Переход в личный кабинет
         element = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, self.top_menu_xpath)))
-        time.sleep(2)
         element = self.driver.find_elements(By.XPATH, self.top_menu_xpath)[1]
         element.click()
 
     def click_messages_button(self):
         # Нажимаем на кнопку "Сообщения"
         element = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, self.messages_xpath)))
-        time.sleep(2)
         element.click()
 
     def click_defferet_button(self):
@@ -182,7 +184,6 @@ class HomePage:
         actions.move_to_element(self.driver.find_elements(By.XPATH, self.top_menu_xpath)[3])
         actions.perform()
         # Нажимаем на "Лабиринт сейчас" контекстного меню корзины
-        time.sleep(2)
         element = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, self.cart_menu_now_xpath)))
         element = self.driver.find_elements(By.XPATH, self.cart_menu_now_xpath)[0]
@@ -195,7 +196,6 @@ class HomePage:
         actions.move_to_element(self.driver.find_elements(By.XPATH, self.top_menu_xpath)[3])
         actions.perform()
         # Нажимаем на "Главные книги" контекстного меню корзины
-        time.sleep(2)
         element = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, self.cart_menu_best_xpath)))
         element = self.driver.find_elements(By.XPATH, self.cart_menu_best_xpath)[0]
@@ -208,7 +208,6 @@ class HomePage:
         actions.move_to_element(self.driver.find_elements(By.XPATH, self.top_menu_xpath)[3])
         actions.perform()
         # Нажимаем на "Главные книги" контекстного меню корзины
-        time.sleep(2)
         element = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, self.cart_menu_create_order_xpath)))
         element = self.driver.find_elements(By.XPATH, self.cart_menu_create_order_xpath)[1]
@@ -219,10 +218,10 @@ class HomePage:
         if check_exists_by_xpath(self.driver, self.empty_cart_xpath):
             element = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, self.empty_cart_xpath)))
-            return (element.text)
+            return element.text
 
     def click_user_agreement_button(self):
-        # Нажимаем на пользовательнское соглашение
+        # Нажимаем на пользовательское соглашение
         element = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, self.users_agreement_xpath)))
         element = self.driver.find_elements(By.XPATH, self.users_agreement_xpath)[1]
@@ -268,7 +267,6 @@ class HomePage:
 
     def click_school_english(self):
         # Наводим курсор на "Школа"
-        time.sleep(2)
         element = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, self.school_button)))
         element = self.driver.find_elements(By.XPATH, self.school_button)[1]
@@ -288,7 +286,6 @@ class HomePage:
 
     def click_children_art(self):
         # Наводим на "Игрушки"
-        time.sleep(2)
         games = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, self.games_button_xpath)))
         games = self.driver.find_elements(By.XPATH, self.games_button_xpath)[0]
@@ -300,7 +297,7 @@ class HomePage:
         actions = ActionChains(self.driver)
         actions.move_to_element(children_art)
         actions.perform()
-        # Нажимаем на "Алмазеые мозаики
+        # Нажимаем на "Алмазные мозаики
         diamond_mozaik = self.driver.find_element(By.XPATH, self.diamond_mozaik_xpath)
         diamond_mozaik.click()
 
@@ -313,7 +310,6 @@ class HomePage:
 
     def click_globus_xpath(self):
         # Наводим курсор на канцтовары
-        time.sleep(2)
         games = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, self.stationery_xpath)))
         games = self.driver.find_elements(By.XPATH, self.stationery_xpath)[0]
@@ -326,7 +322,6 @@ class HomePage:
 
     def click_cd_dvd_button(self):
         # Наводим курсор на кнопку "Ещё..." главного меню
-        time.sleep(2)
         element = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, self.mainmenu_submenu_xpath)))
         element = self.driver.find_elements(By.XPATH, self.mainmenu_submenu_xpath)[0]
@@ -334,12 +329,11 @@ class HomePage:
         actions.move_to_element(element)
         actions.perform()
         # Нажимаем на CD/DVD
-        multimedia = self.driver.find_elements(By.XPATH,self.multimedia_xpath)[-2]
+        multimedia = self.driver.find_elements(By.XPATH, self.multimedia_xpath)[-2]
         multimedia.click()
 
     def click_souvenir_button(self):
         # Наводим курсор на кнопку "Ещё..." главного меню
-        time.sleep(2)
         element = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, self.mainmenu_submenu_xpath)))
         element = self.driver.find_elements(By.XPATH, self.mainmenu_submenu_xpath)[0]
@@ -347,12 +341,11 @@ class HomePage:
         actions.move_to_element(element)
         actions.perform()
         # Нажимаем на "Сувениры"
-        souvenir = self.driver.find_elements(By.XPATH,self.souvenir_xpath)[-2]
+        souvenir = self.driver.find_elements(By.XPATH, self.souvenir_xpath)[-2]
         souvenir.click()
 
     def click_journals_button(self):
         # Наводим курсор на кнопку "Ещё..." главного меню
-        time.sleep(2)
         element = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, self.mainmenu_submenu_xpath)))
         element = self.driver.find_elements(By.XPATH, self.mainmenu_submenu_xpath)[0]
@@ -360,12 +353,11 @@ class HomePage:
         actions.move_to_element(element)
         actions.perform()
         # Нажимаем на "Журналы"
-        souvenir = self.driver.find_elements(By.XPATH,self.journals_xpath)[-2]
+        souvenir = self.driver.find_elements(By.XPATH, self.journals_xpath)[-2]
         souvenir.click()
 
     def click_household_button(self):
         # Наводим курсор на кнопку "Ещё..." главного меню
-        time.sleep(2)
         element = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, self.mainmenu_submenu_xpath)))
         element = self.driver.find_elements(By.XPATH, self.mainmenu_submenu_xpath)[0]
@@ -373,7 +365,7 @@ class HomePage:
         actions.move_to_element(element)
         actions.perform()
         # Нажимаем на "Товары для дома"
-        souvenir = self.driver.find_elements(By.XPATH,self.household_xpath)[-2]
+        souvenir = self.driver.find_elements(By.XPATH, self.household_xpath)[-2]
         souvenir.click()
 
     def click_club_button(self):
@@ -383,9 +375,51 @@ class HomePage:
         element = self.driver.find_elements(By.XPATH, self.club_xpath)[0]
         element.click()
 
-    def click_region_button(self):
-        #Нажимаем на кнопку с названием региона в главном меню
+    def change_region_name(self):
+        # Нажимаем на кнопку с названием региона в главном меню
         element = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, self.region_xpath)))
-        element = self.driver.find_elements(By.XPATH, self.region_xpath)[0]
+        element.click()
+        # В поле ввода нового наименования региона вводим новое название
+        element_input = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.region_input_xpath)))
+        element_input.clear()
+        element_input.send_keys("Пермь")
+        time.sleep(2)
+        element_input.send_keys(Keys.ENTER)
+        # Возвращаем новое название региона
+        element = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.region_xpath)))
+        return element.text
+
+    def change_delivery_params(self):
+        # Нажимаем на кнопку, вызывающую карту
+        element = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.map_xpath)))
+        element = self.driver.find_elements(By.XPATH, self.map_xpath)[0]
+        element.click()
+        # Переходим на карту
+        # Нажимаем на фильтр дат доставки
+        element = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.delivery_date_filter_xpath)))
+        element.click()
+        # В выпадающем списке выбираем первый элемент
+        element = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.delivery_date_xpath)))
+        element.click()
+        # Выбираем первый пункт самовывоза из списка
+        element = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.delivery_point_caption_xpath)))
+        element = self.driver.find_elements(By.XPATH, self.delivery_point_caption_xpath)[0]
+        element.click()
+        # Проверяем наличие всплывающего окошка с информацией о пункте самовывоза
+        popup_baloon = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.delivery_point_ymaps_xpath)))
+        return check_exists_by_xpath(self.driver, self.delivery_point_ymaps_xpath)
+
+    def click_delivery_and_payment_button(self):
+        # Нажимаем на кнопку "Доставка и оплата" меню
+        element = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, self.secondary_menu_xpath)))
+        element = self.driver.find_elements(By.XPATH, self.secondary_menu_xpath)[0]
         element.click()
