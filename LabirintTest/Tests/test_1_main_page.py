@@ -5,6 +5,8 @@ from selenium.webdriver.common.by import By
 from Pages.homePage import HomePage
 from Pages.cartPage import CartPage
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.keys import Keys
+
 
 
 class MainPageTest(unittest.TestCase):
@@ -333,6 +335,16 @@ class MainPageTest(unittest.TestCase):
         driver.get('https://www.labirint.ru/cart/')
         # Нажимаем на "Сертификаты и купоны"
         cartpage.click_cart_coupon_button("N39F82W6RZ")
+
+    def test_scroll(self):
+        """Проверка возможности спуститьбся в подвал сайта"""
+        driver = self.driver
+        driver.get('https://www.labirint.ru/')
+        homepage = HomePage(driver)
+        html = driver.find_element(By.TAG_NAME,'html')
+        html.send_keys(Keys.END)
+        assert  True
+
 
     @classmethod
     def tearDownClass(cls):
